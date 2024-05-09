@@ -15,14 +15,22 @@ jobs:
 - job: Job1
   steps:
   - script: echo Hello, world.. this is Ripon!
-    displayName: 'Run a one-line script'
+    displayName: 'Showing my nick name'
 
   - script: |
       echo Add other tasks to build, test, and deploy your project.
       echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    displayName: 'Run a multi-line script'
 
 - job: Job2
+  dependsOn: Job1
   steps:
-  - script: echo Hello, world.. people also call me Mohammad!
-  displayName: 'Run a one-line script'
+  - script: echo Hello, world.. My son's name is Naveed!
+    displayName: 'Run a single-line script'
+
+  
+- job: Job3
+  dependsOn: Job2
+  steps:
+  - script: echo Hello, world.. My daughter is Umairah!
+    displayName: 'showing my daughter name'
