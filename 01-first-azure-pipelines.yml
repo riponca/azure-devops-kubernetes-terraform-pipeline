@@ -28,7 +28,6 @@ jobs:
   - script: echo Hello, world.. My son's name is Naveed!
     displayName: 'Run a single-line script'
 
-  
 - job: Job3
   dependsOn: Job2
   steps:
