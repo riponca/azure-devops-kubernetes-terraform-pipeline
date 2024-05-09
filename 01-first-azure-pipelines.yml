@@ -29,7 +29,6 @@ jobs:
     displayName: 'Run a single-line script'
 
 - job: Job3
-
   steps:
   - script: echo Hello, world.. My daughter is Umairah!
     displayName: 'showing my daughter name'
