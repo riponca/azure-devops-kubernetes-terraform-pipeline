@@ -9,11 +9,20 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world.. this is actually Mohammad Hossain!
-  displayName: 'Run a one-line script'
+#Piplelines > Stages > Jobs > Tasks (steps)
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+jobs:
+- job: Job1
+  steps:
+  - script: echo Hello, world.. this is Ripon!
+    displayName: 'Run a one-line script'
+
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+      echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- job: Job2
+  steps:
+  - script: echo Hello, world.. people also call me Mohammad!
+  displayName: 'Run a one-line script'
